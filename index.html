@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> 
+    
+    <script src="node_modules/angular/angular.js"></script>
+    
+    <script src="main.js"></script>
+    <style>
+        .container{
+            box-shadow: 3px 3px 18px -3px;
+            margin-top: 110px;
+        }
+        .item{
+            text-align: center;
+            height: 250px;
+            padding-top: 96px;
+            font-size: 20px;
+            background-color: #eee;
+            cursor: pointer;
+            border: solid 1px #ddd;
+            box-shadow: inset 0px -6px 17px -10px;
+        }
+        .item:hover{
+            background-color: #fbfbfb;
+        }
+        .jimbotron{
+            text-align: center;
+            background-color: #b6fd92;
+            height: 300px;
+            padding-top: 95px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .jimbotron:hover{
+            background-color: #a5ff77;
+        }
+        .jimbotron span{
+            font-size: 55px;
+        }
+    </style>
+</head>
+<body ng-app="app" ng-cloak>
+    <div class="container" ng-controller="main">
+        <div class="row">
+            <div class="col-xs-3 item">
+                <label for="">Bitfinex</label>
+                <p class="bfnx value">{{values.bfnx||'- '}} USD</p>
+            </div>
+            <div class="col-xs-3 item">
+                <label for="">Poloniex</label>
+                <p class="plnx value">{{values.plnx||'- '}} USD</p>
+            </div>
+            <div class="col-xs-3 item">
+                <label for="">Livecoin</label>
+                <p class="ybt value">{{values.livecoin||'- '}} USD</p>
+            </div>
+            <div class="col-xs-3 item">
+                <label for="">Cex</label>
+                <p class="bfnx value">{{values.cex||'- '}} USD</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="jimbotron">        
+                <h1>Курс bitcoin: <span>{{bitcoinCourse}}</span> USD</h1>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
